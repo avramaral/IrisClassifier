@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Iris Classifier</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="container-title">Iris Classifier</h3>
+            <div class="container-form">
+                <form action="#">
+                    <div class="form-input">
+                        <label class="form-input-label" for="sepalLen">Sepal Length </label>
+                        <input class="form-input-input" type="range" id="sepalLen" value="5" min="0.1" max="9.9" step="0.1" />
+                        <span class="form-input-value sepalLen-value">5.0 cm</span>
+                    </div>
+                    <div class="form-input">
+                        <label class="form-input-label" for="sepalWid">Sepal Width</label>
+                        <input class="form-input-input" type="range" id="sepalWid" value="5" min="0.1" max="9.9" step="0.1" />
+                        <span class="form-input-value sepalWid-value">5.0 cm</span>
+                    </div>
+                    <div class="form-input">
+                        <label class="form-input-label" for="petalLen">Petal Length</label>
+                        <input class="form-input-input" type="range" id="petalLen" value="5" min="0.1" max="9.9" step="0.1" />
+                        <span class="form-input-value petalLen-value">5.0 cm</span>
+                    </div>
+                    <div class="form-input">
+                        <label class="form-input-label" for="petalWid">Petal Width</label>
+                        <input class="form-input-input" type="range" id="petalWid" value="5" min="0.1" max="9.9" step="0.1" />
+                        <span class="form-input-value petalWid-value">5.0 cm</span>
+                    </div>
+                    <div class="form-input">
+                        <label class="form-input-label" for="modelName">Model Name</label>
+                        <select class="form-input-model" name="modelName" id="modelName">
+                            <option value="LogisticRegression" selected>Logistic Regression</option>
+                            <option value="KNN">KNN</option>
+                            <option value="MultiLayerPerceptron">Multi-layer Perceptron</option>
+                            <option value="SupportVectorClassifier">Support Vector Classifier</option>
+                        </select>
+                    </div>
+                    <div class="form-submit">
+                        <input class="form-submit-btn" id="submitBtn" type="submit" value="Classify" />
+                    </div>
+                </form>
+            </div>
+            <div class="result">
+                <div class="container-result">
+                    <hr />
+                    <span class="result-label">Result</span>
+                    <p class="result-description">The flower with the given characteristics is classified as <strong class="result-name">#####</strong>.</p>
+                    <div class="container-result-details">
+                        <div class="details-image">
+                            <img class="photo" src="./images/question-mark.png" alt="Flower image" />
+                        </div>
+                        <div class="details-list">
+                            <ul>
+                                <li><p class="md-result">###</p></li>
+                                <li>Sepal Length: <span class="sl-result">0.0 cm</span>.</li>
+                                <li>Sepal Width: &nbsp;<span class="sw-result">0.0 cm</span>.</li>
+                                <li>Petal Length: <span class="pl-result">0.0 cm</span>.</li>
+                                <li>Petal Width: &nbsp;<span class="pw-result">0.0 cm</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
